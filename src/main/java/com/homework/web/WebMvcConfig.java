@@ -18,6 +18,10 @@ public class WebMvcConfig implements WebMvcConfigurer {
 				.addResourceLocations(staticString + File.separator + "images" + File.separator);
 		registry.addResourceHandler("/txt/**")
 				.addResourceLocations(staticString + File.separator + "txt" + File.separator);
+		registry.addResourceHandler("/swagger-ui.html").addResourceLocations("src/main/resources");
+
+
+
 	}
 
 }

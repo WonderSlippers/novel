@@ -26,7 +26,7 @@ public class AppController {
 	NovelService novelService;
 
 	@GetMapping("/me")
-	@ApiOperation("查询eMe")
+	@ApiOperation("查询Me")
 	@PreAuthorize("isAuthenticated()")
 	public ResponseObject getMe() {
 		log.info("查询Me");

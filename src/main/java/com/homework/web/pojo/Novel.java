@@ -30,6 +30,9 @@ public class Novel extends AbstractAuditingEntity {
 	@ApiModelProperty("作者的id")
 	Integer user_id;
 	@Column
+	@ApiModelProperty("审核通过")
+	boolean approved;
+	@Column
 	@ApiModelProperty("分类的id")
 	Integer category_id;
 	@Column

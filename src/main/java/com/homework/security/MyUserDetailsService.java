@@ -23,11 +23,7 @@ public class MyUserDetailsService implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		// 获取用户的基本信息
 		com.homework.web.pojo.User user = userService.selectByUsername(username);
-//		user=new com.homework.web.pojo.User();
-//		user.setUsername(username);
-//		user.setPassword("123456");
-//		user.setRole("ADMIN");
-		// 构建包装了用户信息的对象并返回
+
 		return new User(username, passwordEncoder.encode(user.getPassword()),
 				AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_" + user.getRole()));
 	}

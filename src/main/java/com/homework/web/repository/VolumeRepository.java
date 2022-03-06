@@ -14,4 +14,6 @@ public interface VolumeRepository extends JpaRepository<Volume, Integer> {
 	
 	@Query(value = "select * from volume where novel_id = :novel_id and name=:name", nativeQuery = true)
 	Volume selectByNovel_idName(@Param(value = "novel_id") Integer novel_id, @Param(value = "name") String name);
+
+
 }
